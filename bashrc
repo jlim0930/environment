@@ -64,4 +64,7 @@ PS2="> "
 PS3="> "
 PS4="+ "
 
-fortune -a
+fortune_bin=`which fortune 2>/dev/null`
+if [ $fortune_bin ]; then
+  fortune -a
+fi
